@@ -1,6 +1,19 @@
 :root {
+  --circle-size: 500px;
+  --element-size: 40px;
+  --radius: 50%;
+  --total-elements: 27;
+  --base-angle: calc(360deg / var(--total-elements));
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
