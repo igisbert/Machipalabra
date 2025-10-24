@@ -16,12 +16,10 @@
   justify-content: center;
   color: var(--black);
   font-weight: bold;
-  font-size: 14px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
   cursor: default;
-  border-radius: 50%;
   background: var(--white);
   box-shadow: var(--neumorphism-shadow);
 
@@ -113,4 +111,15 @@
 }
 .letter:nth-child(27) {
   --angle: calc(26 * var(--base-angle));
+}
+
+.correct {
+  background-color: var(--correct);
+}
+
+.incorrect {
+  background-color: var(--wrong);
+}
+.current {
+  background-color: var(--current);
 }
