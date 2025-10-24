@@ -1,1 +1,14 @@
 /* The user did not want styles to be added to this file */
+.questionDisplay {
+  background-color: var(--white);
+  box-shadow: var(--neumorphism-shadow);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  height: 4lh;
+}
+
+.questionDisplay p {
+  margin: 0;
+  opacity: 0.8;
+}

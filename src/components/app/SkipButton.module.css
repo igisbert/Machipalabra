@@ -1,1 +1,8 @@
 /* The user did not want styles to be added to this file */
+.skipButton {
+  height: 100%;
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--neumorphism-shadow);
+}

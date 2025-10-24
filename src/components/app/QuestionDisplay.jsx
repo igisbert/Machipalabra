@@ -7,15 +7,19 @@ import {
 import styles from "./QuestionDisplay.module.css";
 
 export default function QuestionDisplay() {
-  if (gameStatus.value !== GAME_STATUS.PLAYING) {
+  /* if (gameStatus.value !== GAME_STATUS.PLAYING) {
     return null;
-  }
+  } */
+
+  const isDisabled = gameStatus.value !== GAME_STATUS.PLAYING;
 
   const currentQuestion = questionsSignal.value[currentQuestionIndex.value];
 
   return (
-    <div className={styles.questionDisplay}>
-      <p>{currentQuestion.pregunta.pregunta}</p>
+    <div
+      className={`${styles.questionDisplay} ${isDisabled ? "disabled" : ""}`}
+    >
+      <p>{!isDisabled && currentQuestion.pregunta.pregunta}</p>
     </div>
   );
 }

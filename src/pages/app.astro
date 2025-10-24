@@ -10,23 +10,34 @@ import StartButton from "@/components/app/StartButton.jsx";
 
 <Layout>
   <header class="app-header"><h1>Machipalabra</h1></header>
-  <div class="score-container">
-    <ScoreItem type="correct" client:load />
-    <ScoreItem type="incorrect" client:load />
-  </div>
+  <main>
+    <div class="score-container">
+      <ScoreItem type="correct" client:load />
+      <ScoreItem type="incorrect" client:load />
+    </div>
 
-  <StartButton client:load />
+    <!-- <StartButton client:load /> -->
 
-  <div class="letters-container">
-    <Letters client:load />
-    <div class="time">500</div>
-  </div>
-  <div class="">
-    <QuestionDisplay client:load />
-  </div>
-  <div class="">
-    <AnswerInput client:load />
-  </div>
-  <SkipButton client:load />
+    <div class="letters-container">
+      <Letters client:load />
+      <div class="time">300</div>
+    </div>
+    <div class="questions">
+      <QuestionDisplay client:load />
+      <AnswerInput client:load />
+    </div>
+  </main>
 </Layout>
 
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .questions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 1rem;
+  }
+</style>

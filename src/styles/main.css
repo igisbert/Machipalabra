@@ -1,5 +1,5 @@
 :root {
-  --circle-size: 700px;
+  --circle-size: 500px;
   --element-size: 10%;
   --radius: 50%;
   --total-elements: 27;
@@ -42,11 +42,16 @@ body {
 .time {
   font-family: "DSEG7 Classic", sans-serif;
   position: absolute;
-  font-size: 6rem;
+  font-size: 5rem;
   border-radius: 13px;
   background: var(--white);
   box-shadow: var(--neumorphism-shadow);
   padding: 2rem;
+}
+
+.disabled {
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .correct {
