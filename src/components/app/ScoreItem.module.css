@@ -3,6 +3,9 @@
   align-items: center;
   padding: 1rem;
   border-radius: 8px;
+  border-radius: 13px;
+  background: var(--white);
+  box-shadow: var(--neumorphism-shadow);
 }
 
 .label {

@@ -1,15 +1,22 @@
 :root {
-  --circle-size: 500px;
-  --element-size: 40px;
+  --circle-size: 700px;
+  --element-size: 10%;
   --radius: 50%;
   --total-elements: 27;
   --base-angle: calc(360deg / var(--total-elements));
+  --white: #dfdfdf;
+  --black: #141414;
+  --correct: #67da67;
+  --wrong: #df4f4f;
+  --current: #e0b35f;
+  --neumorphism-shadow: inset 5px 5px 10px #bdbdbd, inset -5px -5px 10px #ffffff;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
 }
 
 .app-header {
@@ -29,11 +36,15 @@ body {
   align-items: center;
   justify-content: center;
   user-select: none;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .time {
   font-family: "DSEG7 Classic", sans-serif;
   position: absolute;
   font-size: 6rem;
+  border-radius: 13px;
+  background: var(--white);
+  box-shadow: var(--neumorphism-shadow)
+  padding: 2rem;
 }
