@@ -27,3 +27,11 @@ export const alphabet = [
   "y",
   "z",
 ];
+
+export const LETTER_STATUS = {
+  UNANSWERED: "unanswered",
+  CORRECT: "correct",
+  INCORRECT: "incorrect",
+  SKIPPED: "skipped",
+};
+

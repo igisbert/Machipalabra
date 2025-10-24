@@ -1,9 +1,14 @@
+import { LETTER_STATUS } from "@/utils/constants.js";
+
 export const selectRandomQuestions = (questions) => {
   return questions.map((letterData) => {
     const randomIndex = Math.floor(Math.random() * letterData.preguntas.length);
     return {
       ...letterData,
-      pregunta: letterData.preguntas[randomIndex],
+      pregunta: {
+        ...letterData.preguntas[randomIndex],
+        status: LETTER_STATUS.UNANSWERED,
+      },
     };
   });
 };

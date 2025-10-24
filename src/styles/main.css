@@ -45,6 +45,17 @@ body {
   font-size: 6rem;
   border-radius: 13px;
   background: var(--white);
-  box-shadow: var(--neumorphism-shadow)
+  box-shadow: var(--neumorphism-shadow);
   padding: 2rem;
+}
+
+.correct {
+  background-color: var(--correct);
+}
+
+.wrong {
+  background-color: var(--wrong);
+}
+.current {
+  background-color: var(--current);
 }
