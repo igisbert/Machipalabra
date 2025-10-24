@@ -4,12 +4,13 @@ import Letters from "@/components/app/Letters";
 ---
 
 <Layout>
-  <h1>Machipalabra</h1>
+  <header><h1>Machipalabra</h1></header>
   <div class="scoreContainer">
     <div>Aciertos: 1</div>
     <div>Fallos: 3</div>
   </div>
-  <div class="app-container">
+  <div class="letters-container">
     <Letters client:load />
+    <div class="time">500</div>
   </div>
 </Layout>
