@@ -379,3 +379,4 @@ const machipalabra = [
     ],
   },
 ];
+export default machipalabra;

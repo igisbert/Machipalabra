@@ -1,0 +1,13 @@
+.scoreItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

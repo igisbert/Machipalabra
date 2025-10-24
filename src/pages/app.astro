@@ -1,16 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Letters from "@/components/app/Letters";
+import ScoreItem from "@/components/app/ScoreItem.jsx";
+import QuestionDisplay from "@/components/app/QuestionDisplay.jsx";
+import AnswerInput from "@/components/app/AnswerInput.jsx";
 ---
 
 <Layout>
-  <header><h1>Machipalabra</h1></header>
-  <div class="scoreContainer">
-    <div>Aciertos: 1</div>
-    <div>Fallos: 3</div>
+  <header class="app-header"><h1>Machipalabra</h1></header>
+  <div class="score-container">
+    <ScoreItem type="correct" client:load />
+    <ScoreItem type="incorrect" client:load />
   </div>
+
   <div class="letters-container">
     <Letters client:load />
     <div class="time">500</div>
+  </div>
+  <div class="">
+    <QuestionDisplay client:load />
+  </div>
+  <div class="">
+    <AnswerInput client:load />
   </div>
 </Layout>

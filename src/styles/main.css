@@ -12,12 +12,24 @@ body {
   flex-direction: column;
 }
 
+.app-header {
+  text-align: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .letters-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   user-select: none;
+  margin-top: 2rem;
 }
 
 .time {
