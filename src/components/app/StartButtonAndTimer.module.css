@@ -1,0 +1,14 @@
+.startButton {
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--neumorphism-shadow);
+}
+.time {
+  font-family: "DSEG7 Classic", sans-serif;
+  font-size: clamp(2rem, 10vw, 5rem);
+  border-radius: 13px;
+  background: var(--white);
+  box-shadow: var(--neumorphism-shadow);
+  padding: 1.5rem 2rem;
+}

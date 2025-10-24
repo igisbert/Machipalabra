@@ -1,11 +1,14 @@
 :root {
-  --circle-size: 500px;
+  /*   --circle-size: 500px;
+ */
+  --circle-size: clamp(300px, 60vw, 500px);
   --element-size: 10%;
   --radius: 50%;
   --total-elements: 27;
   --base-angle: calc(360deg / var(--total-elements));
   --white: #dfdfdf;
   --black: #141414;
+  --text-color: color-mix(in srgb, var(--black), transparent 20%);
   --correct: #67da67;
   --wrong: #df4f4f;
   --current: #e0b35f;
@@ -17,10 +20,18 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--white);
+  color: var(--text-color);
 }
 
 .app-header {
   text-align: center;
+  padding: 2rem 1rem;
+
+  h1 {
+    margin: 0;
+    font-family: "Homemade Apple", cursive;
+    font-size: clamp(2rem, 2vw, 4rem);
+  }
 }
 
 .score-container {
@@ -39,16 +50,6 @@ body {
   margin-top: 4rem;
 }
 
-.time {
-  font-family: "DSEG7 Classic", sans-serif;
-  position: absolute;
-  font-size: 5rem;
-  border-radius: 13px;
-  background: var(--white);
-  box-shadow: var(--neumorphism-shadow);
-  padding: 2rem;
-}
-
 .disabled {
   opacity: 0.25;
   pointer-events: none;
@@ -63,4 +64,13 @@ body {
 }
 .current {
   background-color: var(--current);
+}
+
+@media (width < 600px) {
+  /*   :root {
+    --circle-size: 300px;
+  } */
+  /*   .time {
+    font-size: 2rem;
+  } */
 }

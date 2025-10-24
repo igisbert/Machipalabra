@@ -5,7 +5,7 @@ import ScoreItem from "@/components/app/ScoreItem.jsx";
 import QuestionDisplay from "@/components/app/QuestionDisplay.jsx";
 import AnswerInput from "@/components/app/AnswerInput.jsx";
 import SkipButton from "@/components/app/SkipButton.jsx";
-import StartButton from "@/components/app/StartButton.jsx";
+import StartButtonAndTimer from "@/components/app/StartButtonAndTimer.jsx";
 ---
 
 <Layout>
@@ -16,24 +16,33 @@ import StartButton from "@/components/app/StartButton.jsx";
       <ScoreItem type="incorrect" client:load />
     </div>
 
-    <!-- <StartButton client:load /> -->
-
     <div class="letters-container">
       <Letters client:load />
-      <div class="time">300</div>
+      <div class="start-button-timer-container">
+        <StartButtonAndTimer client:load />
+      </div>
     </div>
     <div class="questions">
       <QuestionDisplay client:load />
       <AnswerInput client:load />
     </div>
   </main>
+  <footer>OLA</footer>
 </Layout>
 
 <style>
   main {
-    max-width: 1200px;
+    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1;
   }
+
+  .start-button-timer-container {
+    position: absolute;
+  }
+
   .questions {
     display: flex;
     flex-direction: column;

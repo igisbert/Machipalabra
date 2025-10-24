@@ -14,10 +14,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--black);
+  color: var(--text-color);
   font-weight: bold;
-  font-size: 2rem;
-  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: clamp(0.9rem, 2vw, 2rem);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
   cursor: default;
   background: var(--white);
@@ -114,12 +114,18 @@
 }
 
 .correct {
-  background-color: var(--correct);
+  box-shadow: inset 5px 5px 10px
+      color-mix(in srgb, var(--correct), transparent 25%),
+    inset -5px -5px 10px color-mix(in srgb, var(--correct), transparent 70%);
 }
 
 .incorrect {
-  background-color: var(--wrong);
+  box-shadow: inset 5px 5px 10px
+      color-mix(in srgb, var(--wrong), transparent 25%),
+    inset -5px -5px 10px color-mix(in srgb, var(--wrong), transparent 70%);
 }
 .current {
-  background-color: var(--current);
+  box-shadow: inset 5px 5px 10px
+      color-mix(in srgb, var(--current), transparent 25%),
+    inset -5px -5px 10px color-mix(in srgb, var(--current), transparent 70%);
 }
