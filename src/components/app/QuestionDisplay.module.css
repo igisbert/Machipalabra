@@ -5,7 +5,8 @@
   padding: 1rem;
   border-radius: 1rem;
   transition: opacity 0.3s ease-in-out;
-  height: 4lh;
+  min-height: 4lh;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
 }
 
 .questionDisplay p {

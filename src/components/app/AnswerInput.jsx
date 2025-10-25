@@ -32,6 +32,7 @@ export default function AnswerInput() {
           value={answer.value}
           onInput={handleInput}
           name="answer"
+          autoComplete="off"
           placeholder="Escribe tu respuesta..."
           autoFocus
         />

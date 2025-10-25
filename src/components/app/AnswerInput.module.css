@@ -9,6 +9,12 @@
   gap: 1rem;
 }
 
+@media (width < 600px) {
+  .answerForm {
+    flex-direction: column;
+  }
+}
+
 .answerForm form {
   display: flex;
   align-items: center;
