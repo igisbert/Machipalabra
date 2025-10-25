@@ -17,7 +17,7 @@
 }
 .time {
   font-family: "DSEG7 Classic", sans-serif;
-  font-size: clamp(2rem, 8vw, 5rem);
+  font-size: clamp(2rem, 8vw, 4.5rem);
   border-radius: 1rem;
   background: var(--white);
   box-shadow: var(--neumorphism-shadow);

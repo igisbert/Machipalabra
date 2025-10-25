@@ -9,8 +9,8 @@ const machipalabra = [
       },
       {
         pregunta:
-          "Empieza por A. Animal que vive en el agua y respira por branquias",
-        respuesta: "atún",
+          "Empieza por A. Jugador de Los Lakers, que al final, acabó conquistando a Toni",
+        respuesta: "Austin Reaves",
       },
     ],
   },
@@ -19,13 +19,13 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Empieza por B. Deporte que se juega con un balón naranja y una canasta",
-        respuesta: "baloncesto",
+          "Empieza por B: Apellido del jugador que, según Pepe, nunca ha fallado un tiro",
+        respuesta: "Bryant",
       },
       {
         pregunta:
-          "Contiene la B. Instrumento musical de cuerda que se toca rasgando",
-        respuesta: "guitarra",
+          "Empieza por B. Grupo coreano que le gusta a la hija de Juanma y que sus iniciales le suenan a Pepe como enfermedad de transmisión sexual",
+        respuesta: "BTS",
       },
     ],
   },
@@ -93,11 +93,13 @@ const machipalabra = [
     letra: "G",
     preguntas: [
       {
-        pregunta: "Empieza por G. Ave de corral más grande que la gallina",
+        pregunta:
+          "Empieza por G. Pívot de la NBA al que Juanma detesta deportivamente (y no solo deportivamente)",
         respuesta: "gallo",
       },
       {
-        pregunta: "Contiene la G. Instrumento musical de cuerda pulsada",
+        pregunta:
+          "Contiene la G. Película musical en la que John Travolta es como Machicado, ambos tienen una cara con la novia y otra con los colegas",
         respuesta: "guitarra",
       },
     ],
@@ -106,8 +108,9 @@ const machipalabra = [
     letra: "H",
     preguntas: [
       {
-        pregunta: "Empieza por H. Alimento que elaboran las abejas",
-        respuesta: "miel",
+        pregunta:
+          "Empieza por H. Franquicia de hijos de puta que le quitaron una PlayStation 5 a un niño para darle una sudadera",
+        respuesta: "Hornets",
       },
       {
         pregunta: "Empieza por H. Lugar donde se atiende a los enfermos",
@@ -137,7 +140,8 @@ const machipalabra = [
         respuesta: "Jesucristo,Jesús",
       },
       {
-        pregunta: "Contiene la J. Animal felino manchado que vive en la selva",
+        pregunta:
+          "Empieza por J. Jugador de Los Clippers que ha sido mandado a la mierda por Juanma",
         respuesta: "jaguar",
       },
     ],
@@ -151,8 +155,9 @@ const machipalabra = [
         respuesta: "Klay Thompson",
       },
       {
-        pregunta: "Contiene la K. Deporte japonés de defensa personal",
-        respuesta: "karate",
+        pregunta:
+          "Empieza por K. Ex jugador lituano al que una amiga de Pepe le tocó el culo",
+        respuesta: "Karnisovas",
       },
     ],
   },
@@ -161,8 +166,8 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Empieza por L. Objeto que sirve para alumbrar en la oscuridad",
-        respuesta: "linterna",
+          "Empieza por L. La red social más desagradable de todas, más falsa aún que Tinder.",
+        respuesta: "LinkedIn",
       },
       {
         pregunta: "Contiene la L. Astro que ilumina la Tierra de noche",
@@ -216,8 +221,9 @@ const machipalabra = [
     letra: "O",
     preguntas: [
       {
-        pregunta: "Empieza por O. Animal acuático con ocho tentáculos",
-        respuesta: "pulpo",
+        pregunta:
+          "Empieza por O. Jugador histórico con el que muchos jugadores entrenan pero a ninguno se le nota",
+        respuesta: "Olajuwon",
       },
       {
         pregunta: "Empieza por O. Metal precioso de color amarillo",
@@ -262,8 +268,9 @@ const machipalabra = [
         respuesta: "Rosalía",
       },
       {
-        pregunta: "Empieza por R. Color del cielo en un día despejado",
-        respuesta: "azul",
+        pregunta:
+          "Empieza por R. Banda británica que Pepe eliminaría de la historia a cambio de que no existiera Coldplay",
+        respuesta: "Radiohead",
       },
     ],
   },
@@ -290,8 +297,9 @@ const machipalabra = [
         respuesta: "Tinder",
       },
       {
-        pregunta: "Contiene la T. Aparato para ver programas y series",
-        respuesta: "televisión",
+        pregunta:
+          "Empieza por T. Timo que consiste en vender o intentar vender un billete de lotería falso como si estuviera premiado. También, según Juanma, Joel Embiid.",
+        respuesta: "Tocomocho",
       },
     ],
   },
@@ -317,8 +325,9 @@ const machipalabra = [
         respuesta: "Vietnam",
       },
       {
-        pregunta: "Empieza por V. Estación del año entre primavera y otoño",
-        respuesta: "verano",
+        pregunta:
+          "Empieza por V. Marca de coches que hace a los jugadores que aguantan 82 partidos con Thibodeau",
+        respuesta: "Volkswagen",
       },
     ],
   },
@@ -341,8 +350,9 @@ const machipalabra = [
     letra: "X",
     preguntas: [
       {
-        pregunta: "Contiene la X. Instrumento musical de láminas de metal",
-        respuesta: "xilófono",
+        pregunta:
+          "Contiene la X. Equipo de la conferencia Este donde se juntan demasiados fatalismos",
+        respuesta: "Sixers",
       },
       {
         pregunta: "Contiene la X. Continuo de números que suman diez",
@@ -359,8 +369,9 @@ const machipalabra = [
         respuesta: "Yonki",
       },
       {
-        pregunta: "Contiene la Y. Vestido de novia de color blanco",
-        respuesta: "traje",
+        pregunta:
+          "Contiene la Y. Evento que organiza Toni y ha cogido el formato de comer, jugar a baloncesto y emborracharse",
+        respuesta: "Planeta Day",
       },
     ],
   },
@@ -373,8 +384,9 @@ const machipalabra = [
         respuesta: "Zubac",
       },
       {
-        pregunta: "Contiene la Z. Color de la nieve",
-        respuesta: "blanco",
+        pregunta:
+          "Empieza por Z. Líquido de las frutas que se saca exprimiéndolas y que Toni ofrecía para desayunar a sus ligues",
+        respuesta: "Zumo",
       },
     ],
   },
