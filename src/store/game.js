@@ -1,12 +1,30 @@
 import { signal, computed } from "@preact/signals";
 import allQuestions from "@/data/questions.js";
 import { selectRandomQuestions, checkAnswer } from "@/utils/game.js";
-import { LETTER_STATUS } from "@/utils/constants.js";
+import { LETTER_STATUS, TIMER_SECONDS } from "@/utils/constants.js";
 
 const initialQuestions = selectRandomQuestions(allQuestions);
 
 export const questionsSignal = signal(initialQuestions);
 export const currentQuestionIndex = signal(0);
+export const time = signal(TIMER_SECONDS);
+
+let timer;
+
+function startTimer() {
+  timer = setInterval(() => {
+    if (time.value > 0) {
+      time.value--;
+    } else {
+      stopTimer();
+      gameStatus.value = GAME_STATUS.FINISHED;
+    }
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timer);
+}
 
 export const correctAnswers = computed(() => {
   return questionsSignal.value.filter(q => q.pregunta.status === LETTER_STATUS.CORRECT).length;
@@ -27,13 +45,24 @@ export const gameStatus = signal(GAME_STATUS.NOT_STARTED);
 // --- Private Helper Functions ---
 
 function findNextQuestionIndex(startIndex = 0) {
-  // First pass: look for unanswered questions
-  const firstPass = questionsSignal.value.findIndex((q, i) => i >= startIndex && q.pregunta.status === LETTER_STATUS.UNANSWERED);
-  if (firstPass !== -1) return firstPass;
+  const questions = questionsSignal.value;
+  const totalQuestions = questions.length;
 
-  // Second pass: look for skipped questions from the beginning
-  const secondPass = questionsSignal.value.findIndex(q => q.pregunta.status === LETTER_STATUS.SKIPPED);
-  if (secondPass !== -1) return secondPass;
+  // Search from startIndex to the end of the array
+  for (let i = startIndex; i < totalQuestions; i++) {
+    const question = questions[i];
+    if (question.pregunta.status === LETTER_STATUS.UNANSWERED || question.pregunta.status === LETTER_STATUS.SKIPPED) {
+      return i;
+    }
+  }
+
+  // Search from the beginning of the array to startIndex
+  for (let i = 0; i < startIndex; i++) {
+    const question = questions[i];
+    if (question.pregunta.status === LETTER_STATUS.UNANSWERED || question.pregunta.status === LETTER_STATUS.SKIPPED) {
+      return i;
+    }
+  }
 
   // No more questions to answer
   return -1;
@@ -45,7 +74,9 @@ export function startGame() {
   // Reset statuses
   questionsSignal.value = questionsSignal.value.map(q => ({ ...q, pregunta: { ...q.pregunta, status: LETTER_STATUS.UNANSWERED } }));
   currentQuestionIndex.value = 0;
+  time.value = TIMER_SECONDS;
   gameStatus.value = GAME_STATUS.PLAYING;
+  startTimer();
 }
 
 function processTurn(newStatus) {
@@ -57,6 +88,7 @@ function processTurn(newStatus) {
 
   if (nextIndex === -1) {
     gameStatus.value = GAME_STATUS.FINISHED;
+    stopTimer();
   } else {
     currentQuestionIndex.value = nextIndex;
   }

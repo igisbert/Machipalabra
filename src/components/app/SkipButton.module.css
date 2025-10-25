@@ -5,4 +5,16 @@
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: var(--neumorphism-shadow);
+  transition: box-shadow 0.3s, scale 0.3s;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .skipButton:hover {
+    box-shadow: var(--neumorphism-shadow-hover);
+  }
+}
+
+.skipButton:active {
+  scale: 0.9;
 }

@@ -13,6 +13,8 @@
   --wrong: #df4f4f;
   --current: #e0b35f;
   --neumorphism-shadow: inset 5px 5px 10px #bdbdbd, inset -5px -5px 10px #ffffff;
+  --neumorphism-shadow-hover: inset -3px -3px 10px #bdbdbd,
+    inset 3px 4px 10px #ffffff;
 }
 
 body {
@@ -64,13 +66,4 @@ body {
 }
 .current {
   background-color: var(--current);
-}
-
-@media (width < 600px) {
-  /*   :root {
-    --circle-size: 300px;
-  } */
-  /*   .time {
-    font-size: 2rem;
-  } */
 }

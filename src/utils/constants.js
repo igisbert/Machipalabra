@@ -35,3 +35,4 @@ export const LETTER_STATUS = {
   SKIPPED: "skipped",
 };
 
+export const TIMER_SECONDS = 300;

@@ -1,14 +1,52 @@
 .startButton {
   border: 0;
   border-radius: 1rem;
-  padding: 1rem;
+  background: var(--white);
   box-shadow: var(--neumorphism-shadow);
+  padding: 1.5rem 2rem;
+  transition: box-shadow 0.3s, scale 0.3s;
+  cursor: pointer;
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  color: var(--text-color);
+}
+
+@media (hover: hover) {
+  .startButton:hover {
+    box-shadow: var(--neumorphism-shadow-hover);
+  }
 }
 .time {
   font-family: "DSEG7 Classic", sans-serif;
   font-size: clamp(2rem, 10vw, 5rem);
-  border-radius: 13px;
+  border-radius: 1rem;
   background: var(--white);
   box-shadow: var(--neumorphism-shadow);
   padding: 1.5rem 2rem;
+  animation: enterAnimation 0.5s forwards;
+}
+
+.buttonExitAnimation {
+  animation: exitAnimation 0.8s forwards;
+  pointer-events: none;
+}
+
+@keyframes exitAnimation {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(5px);
+  }
+}
+
+@keyframes enterAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
 }
