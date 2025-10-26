@@ -26,16 +26,18 @@ export default function AnswerInput() {
   return (
     <div className={`${styles.answerForm} ${isDisabled ? "disabled" : ""}`}>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className={styles.input}
-          value={answer.value}
-          onInput={handleInput}
-          name="answer"
-          autoComplete="off"
-          placeholder="Escribe tu respuesta..."
-          autoFocus
-        />
+        <label className={styles.inputContainer}>
+          <input
+            type="text"
+            className={styles.input}
+            value={answer.value}
+            onInput={handleInput}
+            name="answer"
+            autoComplete="off"
+            placeholder="Escribe tu respuesta..."
+            autoFocus
+          />
+        </label>
         <button type="submit" className={styles.button}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,6 @@ export default function AnswerInput() {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-forward-icon lucide-forward"
           >
             <path d="m15 17 5-5-5-5" />
             <path d="M4 18v-2a4 4 0 0 1 4-4h12" />

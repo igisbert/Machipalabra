@@ -1,17 +1,36 @@
-/* The user did not want styles to be added to this file */
 .skipButton {
   height: 100%;
   border: 0;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: var(--neumorphism-shadow);
   transition: box-shadow 0.3s, scale 0.3s;
   cursor: pointer;
+  position: relative;
+  color: var(--text-color);
+}
+
+.skipButton:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  content: " ";
+  transition: 0.3s ease-out;
+  border-radius: 1rem;
+  filter: var(--blur);
+  box-shadow: var(--neumorphism);
 }
 
 @media (hover: hover) {
-  .skipButton:hover {
-    box-shadow: var(--neumorphism-shadow-hover);
+  .skipButton:hover:before {
+    box-shadow: 5px 5px 10px #a9a8b7, -5px -5px 10px #fff,
+      inset -5px -5px 10px #fff, inset 5px 5px 10px #a9a8b7;
+    transition: 0.3s ease-in;
+    transform: scale(1.05);
   }
 }
 

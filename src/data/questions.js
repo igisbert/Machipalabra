@@ -42,6 +42,11 @@ const machipalabra = [
           "Empieza por C. Lo que Pepe y Juanma no saben ponerse y por lo van con ella en la mano, esperando que alguien decente les ayude.",
         respuesta: "Corbata",
       },
+      {
+        pregunta:
+          "Empieza por C. Diminutivo de un utensilio de cocina que colgó del techo de un piso de estudiantes",
+        respuesta: "Cucharilla",
+      },
     ],
   },
   {
@@ -95,12 +100,12 @@ const machipalabra = [
       {
         pregunta:
           "Empieza por G. Pívot de la NBA al que Juanma detesta deportivamente (y no solo deportivamente)",
-        respuesta: "gallo",
+        respuesta: "Gobert",
       },
       {
         pregunta:
           "Contiene la G. Película musical en la que John Travolta es como Machicado, ambos tienen una cara con la novia y otra con los colegas",
-        respuesta: "guitarra",
+        respuesta: "Grease",
       },
     ],
   },
@@ -142,7 +147,7 @@ const machipalabra = [
       {
         pregunta:
           "Empieza por J. Jugador de Los Clippers que ha sido mandado a la mierda por Juanma",
-        respuesta: "jaguar",
+        respuesta: "James Harden",
       },
     ],
   },
@@ -187,6 +192,10 @@ const machipalabra = [
         pregunta:
           "Empieza por M. Nombre que reciben Vucevic, DeRozan y Lavine al juntarse en los Bulls",
         respuesta: "Mid Three",
+      },
+      {
+        pregunta: "Empieza por M. Región española donde Toni cursó INEF.",
+        respuesta: "Murcia",
       },
     ],
   },
@@ -240,8 +249,9 @@ const machipalabra = [
         respuesta: "Petardos",
       },
       {
-        pregunta: "Contiene la P. Objeto que usamos para escribir",
-        respuesta: "lápiz",
+        pregunta:
+          "Ciudad de origen de los cruasanes que dan olor a las míticas velas",
+        respuesta: "París",
       },
     ],
   },

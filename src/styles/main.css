@@ -1,8 +1,6 @@
 :root {
-  /*   --circle-size: 500px;
- */
   --circle-size: clamp(300px, 60vw, 500px);
-  --element-size: 10%;
+  --element-size: 9%;
   --radius: 50%;
   --total-elements: 27;
   --base-angle: calc(360deg / var(--total-elements));
@@ -15,6 +13,9 @@
   --neumorphism-shadow: inset 5px 5px 10px #bdbdbd, inset -5px -5px 10px #ffffff;
   --neumorphism-shadow-hover: inset -3px -3px 10px #bdbdbd,
     inset 3px 4px 10px #ffffff;
+  /* --test: 8px 8px 20px #a9a8b7, -8px -8px 20px #fff; */
+  --neumorphism: 5px 5px 10px #918793, -5px -5px 10px #fff;
+  --blur: blur(4px);
 }
 
 body {
@@ -38,9 +39,10 @@ body {
 
 .score-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
 .letters-container {
@@ -49,7 +51,7 @@ body {
   align-items: center;
   justify-content: center;
   user-select: none;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .disabled {

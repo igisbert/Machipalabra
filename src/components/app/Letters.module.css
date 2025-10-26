@@ -16,12 +16,10 @@
   justify-content: center;
   color: var(--text-color);
   font-weight: bold;
-  font-size: clamp(0.9rem, 2vw, 2rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
-  cursor: default;
   background: var(--white);
-  box-shadow: var(--neumorphism-shadow);
 
   left: calc(
     50% + var(--radius) * cos(var(--angle) - 90deg) - var(--element-size) / 2
@@ -29,6 +27,22 @@
   top: calc(
     50% + var(--radius) * sin(var(--angle) - 90deg) - var(--element-size) / 2
   );
+}
+
+.letter:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  content: " ";
+  transition: 0.3s ease-out;
+  border-radius: 50%;
+  filter: var(--blur);
+  box-shadow: var(--neumorphism);
 }
 
 .letter:nth-child(1) {
@@ -114,18 +128,18 @@
 }
 
 .correct {
-  box-shadow: inset 5px 5px 10px
+  box-shadow: inset 5px 5px 10px 8px
       color-mix(in srgb, var(--correct), transparent 25%),
-    inset -5px -5px 10px color-mix(in srgb, var(--correct), transparent 70%);
+    inset -5px -5px 10px 8px color-mix(in srgb, var(--correct), transparent 70%);
 }
 
 .incorrect {
-  box-shadow: inset 5px 5px 10px
+  box-shadow: inset 5px 5px 10px 8px
       color-mix(in srgb, var(--wrong), transparent 25%),
-    inset -5px -5px 10px color-mix(in srgb, var(--wrong), transparent 70%);
+    inset -5px -5px 10px 8px color-mix(in srgb, var(--wrong), transparent 70%);
 }
 .current {
-  box-shadow: inset 5px 5px 10px
+  box-shadow: inset 5px 5px 10px 8px
       color-mix(in srgb, var(--current), transparent 25%),
-    inset -5px -5px 10px color-mix(in srgb, var(--current), transparent 70%);
+    inset -5px -5px 10px 8px color-mix(in srgb, var(--current), transparent 70%);
 }

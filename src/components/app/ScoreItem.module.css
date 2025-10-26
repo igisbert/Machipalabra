@@ -4,7 +4,23 @@
   padding: 1rem;
   border-radius: 1rem;
   background: var(--white);
-  box-shadow: var(--neumorphism-shadow);
+  position: relative;
+}
+
+.scoreItem:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  content: " ";
+  transition: 0.3s ease-out;
+  border-radius: 1rem;
+  filter: var(--blur);
+  box-shadow: var(--neumorphism);
 }
 
 .label {

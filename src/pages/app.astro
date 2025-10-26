@@ -9,7 +9,7 @@ import Footer from "@/components/Footer.astro";
 ---
 
 <Layout>
-  <header class="app-header"><h1>Machipalabra</h1></header>
+  <!-- <header class="app-header"><h1>Machipalabra</h1></header> -->
   <main>
     <div class="score-container">
       <ScoreItem type="correct" client:load />
@@ -47,6 +47,12 @@ import Footer from "@/components/Footer.astro";
     display: flex;
     flex-direction: column;
     margin-top: 4rem;
-    gap: 1rem;
+    gap: 4rem;
+  }
+
+  @media (width < 600px) {
+    .questions {
+      gap: 2.5rem;
+    }
   }
 </style>
