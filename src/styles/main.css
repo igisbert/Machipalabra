@@ -7,9 +7,9 @@
   --white: #dfdfdf;
   --black: #141414;
   --text-color: color-mix(in srgb, var(--black), transparent 20%);
-  --correct: #67da67;
+  --correct: #349f34;
   --wrong: #df4f4f;
-  --current: #e0b35f;
+  --current: #a77925;
   --neumorphism-shadow: inset 5px 5px 10px #bdbdbd, inset -5px -5px 10px #ffffff;
   --neumorphism-shadow-hover: inset -3px -3px 10px #bdbdbd,
     inset 3px 4px 10px #ffffff;

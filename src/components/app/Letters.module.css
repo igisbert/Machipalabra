@@ -128,18 +128,12 @@
 }
 
 .correct {
-  box-shadow: inset 5px 5px 10px 8px
-      color-mix(in srgb, var(--correct), transparent 25%),
-    inset -5px -5px 10px 8px color-mix(in srgb, var(--correct), transparent 70%);
+  color: var(--correct);
 }
 
 .incorrect {
-  box-shadow: inset 5px 5px 10px 8px
-      color-mix(in srgb, var(--wrong), transparent 25%),
-    inset -5px -5px 10px 8px color-mix(in srgb, var(--wrong), transparent 70%);
+  color: var(--wrong);
 }
 .current {
-  box-shadow: inset 5px 5px 10px 8px
-      color-mix(in srgb, var(--current), transparent 25%),
-    inset -5px -5px 10px 8px color-mix(in srgb, var(--current), transparent 70%);
+  color: var(--current);
 }
