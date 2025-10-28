@@ -1,11 +1,76 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="background"></div>
+  <main>
+    <h1>Machipalabra</h1>
+    <h2>
+      27 letras, 27 palabras relativas a Mínimo de Veterano que deberás acertar.
+      ¿Te crees capaz de acertar todo el rosco?
+    </h2>
+    <a href="/app">Jugar</a>
+  </main>
+  <Footer />
 </Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+  }
+
+  h1 {
+    margin: 0 0 2rem 0;
+    font-size: clamp(2.5rem, 3vw, 5.5rem);
+  }
+
+  h2 {
+    margin: 0 0 2rem 0;
+    max-width: 80ch;
+    text-align: center;
+  }
+
+  a {
+    padding: 1rem 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 10rem;
+    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+    transition:
+      border-radius 0.7s,
+      scale 0.3s;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      border-radius: 2rem;
+    }
+  }
+
+  a:active {
+    scale: 0.95;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: white;
+    background: radial-gradient(
+      125% 125% at 50% 10%,
+      var(--white) 40%,
+      color-mix(in srgb, var(--black), transparent 10%) 100%
+    );
+  }
+</style>

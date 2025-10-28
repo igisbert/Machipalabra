@@ -18,6 +18,38 @@
   --blur: blur(4px);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: root-out 0.5s forwards;
+}
+
+::view-transition-new(root) {
+  animation: enter 1s ease forwards;
+}
+
+@keyframes root-out {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(0.3);
+  }
+}
+
+@keyframes enter {
+  from {
+    transform: translateY(100%) scale(0.5);
+    filter: blur(15px);
+  }
+  to {
+    transform: translateY(0%) scale(1);
+    filter: blur(0);
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   display: flex;
