@@ -2,7 +2,6 @@ import { useRef } from "preact/hooks";
 import { gameStatus, startGame, GAME_STATUS, time } from "@/store/game.js";
 import { formatTime } from "@/utils/game";
 import styles from "./StartButtonAndTimer.module.css";
-import { throwConfetti } from "@/utils/confetti";
 
 export default function StartButton() {
   const buttonRef = useRef(null);
@@ -16,10 +15,6 @@ export default function StartButton() {
   const handleAnimationEnd = () => {
     startGame();
   };
-
-  if (gameStatus.value === GAME_STATUS.FINISHED) {
-    throwConfetti();
-  }
 
   if (gameStatus.value === GAME_STATUS.NOT_STARTED) {
     return (

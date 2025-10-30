@@ -17,7 +17,8 @@
   color: var(--text-color);
   font-weight: bold;
   font-size: clamp(0.9rem, 1.5vw, 1.5rem);
-  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s ease-in-out;
   text-transform: uppercase;
   background: var(--white);
 

@@ -1,0 +1,33 @@
+.dialog {
+  border: 0;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  animation: slide 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  @supports (corner-shape: squircle) {
+    corner-shape: squircle;
+    border-radius: 4rem;
+  }
+}
+
+.dialog::backdrop {
+  backdrop-filter: blur(6px);
+}
+
+.score {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(100%);
+    filter: blur(5px);
+  }
+  to {
+    transform: translateY(0%);
+    filter: blur(0px);
+  }
+}

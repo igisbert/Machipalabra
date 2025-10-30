@@ -6,10 +6,6 @@ import SkipButton from "@/components/app/SkipButton.jsx";
 export default function AnswerInput() {
   const answer = useSignal("");
 
-  /*  if (gameStatus.value !== GAME_STATUS.PLAYING) {
-    return null;
-  } */
-
   const isDisabled = gameStatus.value !== GAME_STATUS.PLAYING;
 
   const handleInput = (e) => {

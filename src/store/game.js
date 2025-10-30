@@ -17,6 +17,7 @@ function startTimer() {
       time.value--;
     } else {
       stopTimer();
+      markUnansweredAsIncorrect();
       gameStatus.value = GAME_STATUS.FINISHED;
     }
   }, 1000);
@@ -26,12 +27,34 @@ function stopTimer() {
   clearInterval(timer);
 }
 
+function markUnansweredAsIncorrect() {
+  questionsSignal.value = questionsSignal.value.map((q) => {
+    if (
+      q.pregunta.status === LETTER_STATUS.UNANSWERED ||
+      q.pregunta.status === LETTER_STATUS.SKIPPED
+    ) {
+      return {
+        ...q,
+        pregunta: {
+          ...q.pregunta,
+          status: LETTER_STATUS.INCORRECT,
+        },
+      };
+    }
+    return q;
+  });
+}
+
 export const correctAnswers = computed(() => {
-  return questionsSignal.value.filter(q => q.pregunta.status === LETTER_STATUS.CORRECT).length;
+  return questionsSignal.value.filter(
+    (q) => q.pregunta.status === LETTER_STATUS.CORRECT
+  ).length;
 });
 
 export const incorrectAnswers = computed(() => {
-  return questionsSignal.value.filter(q => q.pregunta.status === LETTER_STATUS.INCORRECT).length;
+  return questionsSignal.value.filter(
+    (q) => q.pregunta.status === LETTER_STATUS.INCORRECT
+  ).length;
 });
 
 export const GAME_STATUS = {
@@ -51,7 +74,10 @@ function findNextQuestionIndex(startIndex = 0) {
   // Search from startIndex to the end of the array
   for (let i = startIndex; i < totalQuestions; i++) {
     const question = questions[i];
-    if (question.pregunta.status === LETTER_STATUS.UNANSWERED || question.pregunta.status === LETTER_STATUS.SKIPPED) {
+    if (
+      question.pregunta.status === LETTER_STATUS.UNANSWERED ||
+      question.pregunta.status === LETTER_STATUS.SKIPPED
+    ) {
       return i;
     }
   }
@@ -59,7 +85,10 @@ function findNextQuestionIndex(startIndex = 0) {
   // Search from the beginning of the array to startIndex
   for (let i = 0; i < startIndex; i++) {
     const question = questions[i];
-    if (question.pregunta.status === LETTER_STATUS.UNANSWERED || question.pregunta.status === LETTER_STATUS.SKIPPED) {
+    if (
+      question.pregunta.status === LETTER_STATUS.UNANSWERED ||
+      question.pregunta.status === LETTER_STATUS.SKIPPED
+    ) {
       return i;
     }
   }
@@ -72,7 +101,10 @@ function findNextQuestionIndex(startIndex = 0) {
 
 export function startGame() {
   // Reset statuses
-  questionsSignal.value = questionsSignal.value.map(q => ({ ...q, pregunta: { ...q.pregunta, status: LETTER_STATUS.UNANSWERED } }));
+  questionsSignal.value = questionsSignal.value.map((q) => ({
+    ...q,
+    pregunta: { ...q.pregunta, status: LETTER_STATUS.UNANSWERED },
+  }));
   currentQuestionIndex.value = 0;
   time.value = TIMER_SECONDS;
   gameStatus.value = GAME_STATUS.PLAYING;
@@ -96,7 +128,7 @@ function processTurn(newStatus) {
 
 export function submitAnswer(answer) {
   const currentQuestion = questionsSignal.value[currentQuestionIndex.value];
-  const correctAnswersArray = currentQuestion.pregunta.respuesta.split(',');
+  const correctAnswersArray = currentQuestion.pregunta.respuesta.split(",");
 
   if (checkAnswer(answer, correctAnswersArray)) {
     processTurn(LETTER_STATUS.CORRECT);
@@ -107,4 +139,17 @@ export function submitAnswer(answer) {
 
 export function skipQuestion() {
   processTurn(LETTER_STATUS.SKIPPED);
+}
+
+export function resetGame() {
+  // Detener el timer si está corriendo
+  stopTimer();
+
+  // Seleccionar nuevas preguntas aleatorias
+  questionsSignal.value = selectRandomQuestions(allQuestions);
+
+  // Reset de todos los signals
+  currentQuestionIndex.value = 0;
+  time.value = TIMER_SECONDS;
+  gameStatus.value = GAME_STATUS.NOT_STARTED;
 }

@@ -6,6 +6,7 @@ import QuestionDisplay from "@/components/app/QuestionDisplay.jsx";
 import AnswerInput from "@/components/app/AnswerInput.jsx";
 import StartButtonAndTimer from "@/components/app/StartButtonAndTimer.jsx";
 import Footer from "@/components/Footer.astro";
+import EndGameDialog from "@/components/app/EndGameDialog";
 ---
 
 <Layout>
@@ -26,6 +27,7 @@ import Footer from "@/components/Footer.astro";
       <AnswerInput client:load />
     </div>
   </main>
+  <EndGameDialog client:idle />
   <Footer />
 </Layout>
 
