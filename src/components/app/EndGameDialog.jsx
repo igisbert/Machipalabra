@@ -3,6 +3,7 @@ import styles from "./EndGameDialog.module.css";
 import { gameStatus, GAME_STATUS, resetGame } from "@/store/game.js";
 import { throwConfetti } from "@/utils/confetti";
 import ScoreItem from "./ScoreItem";
+import Button from "./Button";
 
 export default function EndGameDialog() {
   const dialogRef = useRef(null);
@@ -23,6 +24,10 @@ export default function EndGameDialog() {
     resetGame();
   }
 
+  function handleShare() {
+    navigator.clipboard.writeText(window.location.href);
+  }
+
   return (
     <dialog ref={dialogRef} class={styles.dialog}>
       <h1>¡Juego terminado!</h1>
@@ -30,8 +35,10 @@ export default function EndGameDialog() {
         <ScoreItem type="correct" />
         <ScoreItem type="incorrect" />
       </div>
-      <a href="/">Volver al inicio</a>
-      <button onClick={handleReset}>Reset</button>
+      <div className={styles.actions}>
+        <Button onClick={handleReset} label="Volver a jugar" />
+        <Button onClick={handleShare} label="Compartir" />
+      </div>
     </dialog>
   );
 }

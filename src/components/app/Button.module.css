@@ -1,4 +1,4 @@
-.skipButton {
+.button {
   height: 100%;
   border: 0;
   border-radius: 1rem;
@@ -6,10 +6,10 @@
   transition: box-shadow 0.3s, scale 0.3s;
   cursor: pointer;
   position: relative;
-  color: var(--text-color);
+  color: var(--text-color); 
 }
 
-.skipButton:before {
+.button:before {
   position: absolute;
   top: 0;
   right: 0;
@@ -26,7 +26,7 @@
 }
 
 @media (hover: hover) {
-  .skipButton:hover:before {
+  .button:hover:before {
     box-shadow: 5px 5px 10px #a9a8b7, -5px -5px 10px #fff,
       inset -5px -5px 10px #fff, inset 5px 5px 10px #a9a8b7;
     transition: 0.3s ease-in;
@@ -34,6 +34,6 @@
   }
 }
 
-.skipButton:active {
+.button:active {
   scale: 0.9;
 }

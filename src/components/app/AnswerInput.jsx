@@ -1,7 +1,7 @@
 import { useSignal } from "@preact/signals";
-import { gameStatus, submitAnswer, GAME_STATUS } from "@/store/game.js";
+import { gameStatus, submitAnswer, skipQuestion, GAME_STATUS } from "@/store/game.js";
 import styles from "./AnswerInput.module.css";
-import SkipButton from "@/components/app/SkipButton.jsx";
+import Button from "@/components/app/Button.jsx";
 
 export default function AnswerInput() {
   const answer = useSignal("");
@@ -51,7 +51,7 @@ export default function AnswerInput() {
           </svg>
         </button>
       </form>
-      <SkipButton />
+      <Button onClick={skipQuestion} label="¡Machipalabra!" />
     </div>
   );
 }
