@@ -1,10 +1,12 @@
 import { useSignal } from "@preact/signals";
+import { useRef } from "preact/hooks";
 import { gameStatus, submitAnswer, skipQuestion, GAME_STATUS } from "@/store/game.js";
 import styles from "./AnswerInput.module.css";
 import Button from "@/components/app/Button.jsx";
 
 export default function AnswerInput() {
   const answer = useSignal("");
+  const inputRef = useRef(null);
 
   const isDisabled = gameStatus.value !== GAME_STATUS.PLAYING;
 
@@ -17,6 +19,12 @@ export default function AnswerInput() {
     if (answer.value.trim() === "") return;
     submitAnswer(answer.value);
     answer.value = "";
+    inputRef.current?.focus();
+  };
+
+  const handleSkip = () => {
+    skipQuestion();
+    inputRef.current?.focus();
   };
 
   return (
@@ -24,6 +32,7 @@ export default function AnswerInput() {
       <form onSubmit={handleSubmit}>
         <label className={styles.inputContainer}>
           <input
+            ref={inputRef}
             type="text"
             className={styles.input}
             value={answer.value}
@@ -31,7 +40,7 @@ export default function AnswerInput() {
             name="answer"
             autoComplete="off"
             placeholder="Escribe tu respuesta..."
-            autoFocus
+            autoFocus={gameStatus.value === GAME_STATUS.PLAYING}
           />
         </label>
         <button type="submit" className={styles.button}>
@@ -51,7 +60,7 @@ export default function AnswerInput() {
           </svg>
         </button>
       </form>
-      <Button onClick={skipQuestion} label="¡Machipalabra!" />
+      <Button onClick={handleSkip} label="¡Machipalabra!" />
     </div>
   );
 }
