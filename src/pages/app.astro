@@ -7,6 +7,7 @@ import AnswerInput from "@/components/app/AnswerInput.jsx";
 import StartButtonAndTimer from "@/components/app/StartButtonAndTimer.jsx";
 import Footer from "@/components/Footer.astro";
 import EndGameDialog from "@/components/app/EndGameDialog";
+import ShareTemplate from "@/components/app/ShareTemplate";
 ---
 
 <Layout>
@@ -27,7 +28,8 @@ import EndGameDialog from "@/components/app/EndGameDialog";
       <AnswerInput client:load />
     </div>
   </main>
-  <EndGameDialog client:idle />
+  <EndGameDialog client:only />
+  <ShareTemplate client:idle />
   <Footer />
 </Layout>
 

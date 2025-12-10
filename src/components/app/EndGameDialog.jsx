@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "preact/hooks";
 import styles from "./EndGameDialog.module.css";
-import { gameStatus, GAME_STATUS, resetGame } from "@/store/game.js";
+import { gameStatus, GAME_STATUS, resetGame, shareStatus, SHARE_STATUS } from "@/store/game.js";
 import { throwConfetti } from "@/utils/confetti";
 import ScoreItem from "./ScoreItem";
 import Button from "./Button";
+import { handleShareClick } from "@/utils/handleShare";
 
 export default function EndGameDialog() {
   const dialogRef = useRef(null);
@@ -25,7 +26,8 @@ export default function EndGameDialog() {
   }
 
   function handleShare() {
-    navigator.clipboard.writeText(window.location.href);
+    shareStatus.value = SHARE_STATUS.SHARING;
+    handleShareClick();
   }
 
   return (

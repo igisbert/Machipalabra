@@ -65,6 +65,13 @@ export const GAME_STATUS = {
 
 export const gameStatus = signal(GAME_STATUS.NOT_STARTED);
 
+export const SHARE_STATUS = {
+    NOT_SHARING: "not_sharing",
+    SHARING: "sharing",
+}
+
+export const shareStatus = signal(SHARE_STATUS.NOT_SHARING);
+
 // --- Private Helper Functions ---
 
 function findNextQuestionIndex(startIndex = 0) {
