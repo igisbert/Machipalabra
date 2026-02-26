@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/preact": "^4.1.1",
+    "@fontsource/bungee": "^5.2.7",
     "@fontsource/dseg7-classic": "^5.2.5",
     "@fontsource/poppins": "^5.2.7",
     "@preact/signals": "^2.3.2",

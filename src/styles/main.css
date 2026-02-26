@@ -4,18 +4,23 @@
   --radius: 50%;
   --total-elements: 27;
   --base-angle: calc(360deg / var(--total-elements));
-  --white: #dfdfdf;
-  --black: #141414;
-  --text-color: color-mix(in srgb, var(--black), transparent 20%);
+  --white: #ffffff;
+  --black: #000000;
+  /* --text-color: color-mix(in srgb, var(--black), transparent 00%); */
   --correct: #349f34;
   --wrong: #df4f4f;
-  --current: #a77925;
+  --current: #edf031;
   --neumorphism-shadow: inset 5px 5px 10px #bdbdbd, inset -5px -5px 10px #ffffff;
   --neumorphism-shadow-hover: inset -3px -3px 10px #bdbdbd,
     inset 3px 4px 10px #ffffff;
-  /* --test: 8px 8px 20px #a9a8b7, -8px -8px 20px #fff; */
   --neumorphism: 5px 5px 10px #918793, -5px -5px 10px #fff;
   --blur: blur(4px);
+  /* --test: 8px 8px 20px #a9a8b7, -8px -8px 20px #fff; */
+  --brutalism-border: 4px solid var(--black);
+  --brutalism-shadow: 10px 10px 0px var(--black);
+  --brutalism-shadow-small: 3px 3px 0px var(--black);
+  --brutalism-shadow-mobile: 5px 5px 0px var(--black);
+  --brutalism-shadow-small-mobile: 2px 2px 0px var(--black);
 }
 
 @view-transition {
@@ -54,7 +59,7 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: #7248d7;
   color: var(--text-color);
 }
 

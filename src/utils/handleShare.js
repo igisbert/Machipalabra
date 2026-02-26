@@ -6,7 +6,7 @@ const imgRef = document.getElementById("share-template");
 export function handleShareClick() {
 
   requestAnimationFrame(() => {
-    toPng(imgRef, { cacheBust: true,skipFonts: true })
+    toPng(imgRef, { cacheBust: true,skipFonts: false })
       .then((dataUrl) => {
         share(dataUrl)
         shareStatus.value = SHARE_STATUS.NOT_SHARING;
@@ -22,7 +22,7 @@ async function share(dataUrl) {
   const base64 = await fetch(dataUrl)
   base64.blob().then((blob) => {
     const filesArray = [
-      new File([blob], "GuessTheArena.png", {
+      new File([blob], "Machipalabra.png", {
         type: "image/png",
       }),
     ]
@@ -32,10 +32,9 @@ async function share(dataUrl) {
     if (navigator.share) {
       navigator.share(shareData)
     } else {
-      //download the img
       const link = document.createElement("a")
       link.href = dataUrl
-      link.download = "GuessTheArena.png"
+      link.download = "Machipalabra.png"
       link.click()
       link.remove()
     }

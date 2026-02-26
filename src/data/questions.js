@@ -39,7 +39,7 @@ const machipalabra = [
       },
       {
         pregunta:
-          "Empieza por C. Lo que Pepe y Juanma no saben ponerse y por lo van con ella en la mano, esperando que alguien decente les ayude.",
+          "Empieza por C. Lo que Pepe y Juanma no saben ponerse y van con ella en la mano, esperando que alguien decente les ayude.",
         respuesta: "Corbata",
       },
       {
@@ -127,8 +127,8 @@ const machipalabra = [
     letra: "I",
     preguntas: [
       {
-        pregunta: "Empieza por I. Continente helado del Polo Norte",
-        respuesta: "ártico",
+        pregunta: "Empieza por I. Niñato, sabio, omnista y gilipollas",
+        respuesta: "Irving",
       },
       {
         pregunta: "Empieza por I. País con forma de bota en Europa",
@@ -217,8 +217,8 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Empieza por Ñ. Animal grande y peludo que habita en Sudamérica",
-        respuesta: "ñu",
+          "Contiene la Ñ. Cosa que los integrantes del podcast no puedens servir",
+        respuesta: "Coño",
       },
       {
         pregunta: "Contiene la Ñ. Persona de poca edad",
@@ -245,7 +245,7 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Empieza por P. Objetos que Juanma odia profundamente, ya que le parece un concepto estúpido que no entiende cómo puede ser divertido",
+          "Empieza por P. Juanma los odia profundamente, ya que le parece un concepto estúpido que no entiende cómo puede ser divertido",
         respuesta: "Petardos",
       },
       {

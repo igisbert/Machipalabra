@@ -27,17 +27,18 @@ export default function ShareTemplate() {
 
     return (
         <div className={styles.shareTemplate} id="share-template">
+            <h1 className={styles.title}>Machipalabra</h1>
             <div className={styles.right}>
                 <div className={styles.scoreItem}>
-                    Aciertos
-                    <span>{score}</span>
+                    Fallos
+                    <span>{incorrectAnswers.value}</span>
                 </div>
                 
             </div>
             <div className={styles.left}>
                 <div className={styles.scoreItem}>
-                    Fallos
-                    <span>{incorrectAnswers.value}</span>
+                    Aciertos
+                    <span>{score}</span>
                 </div>
             </div>
 

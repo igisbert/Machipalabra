@@ -2,25 +2,16 @@
   display: flex;
   align-items: center;
   padding: 1rem;
-  border-radius: 1rem;
-  background: var(--white);
   position: relative;
+  border: var(--brutalism-border);
+  box-shadow: var(--brutalism-shadow);
+  min-width: 140px;
 }
 
-.scoreItem:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: auto;
-  content: " ";
-  transition: 0.3s ease-out;
-  border-radius: 1rem;
-  filter: var(--blur);
-  box-shadow: var(--neumorphism);
+@media (width < 600px) {
+  .scoreItem {
+    box-shadow: var(--brutalism-shadow-mobile);
+  }
 }
 
 .label {
@@ -28,4 +19,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.correct {
+  background-color: var(--correct);
+}
+
+.wrong {
+  background-color: var(--wrong);
 }

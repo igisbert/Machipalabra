@@ -1,31 +1,20 @@
-/* The user did not want styles to be added to this file */
 .questionDisplay {
   background-color: var(--white);
   padding: 1rem;
-  border-radius: 1rem;
   transition: opacity 0.3s ease-in-out;
   min-height: 4lh;
   font-size: clamp(1.1rem, 3vw, 1.3rem);
   position: relative;
+  border: var(--brutalism-border);
+  box-shadow: var(--brutalism-shadow);
 }
 
-.questionDisplay:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: auto;
-  content: " ";
-  transition: 0.3s ease-out;
-  border-radius: 1rem;
-  filter: var(--blur);
-  box-shadow: var(--neumorphism);
+@media (width < 600px) {
+  .questionDisplay {
+    box-shadow: var(--brutalism-shadow-mobile);
+  }
 }
 
 .questionDisplay p {
   margin: 0;
-  opacity: 0.8;
 }

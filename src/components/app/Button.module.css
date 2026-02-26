@@ -1,34 +1,32 @@
 .button {
   height: 100%;
   border: 0;
-  border-radius: 1rem;
   padding: 1rem;
-  transition: box-shadow 0.3s, scale 0.3s;
+  transition:
+    box-shadow 0.3s,
+    scale 0.3s;
   cursor: pointer;
   position: relative;
-  color: var(--text-color); 
+  color: var(--text-color);
+  border: var(--brutalism-border);
+  box-shadow: var(--brutalism-shadow-small);
+  font-family: "Bungee", system-ui;
 }
 
-.button:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: auto;
-  content: " ";
-  transition: 0.3s ease-out;
-  border-radius: 1rem;
-  filter: var(--blur);
-  box-shadow: var(--neumorphism);
+@media (width < 600px) {
+  .button {
+    width: 100%;
+  }
 }
+
 
 @media (hover: hover) {
   .button:hover:before {
-    box-shadow: 5px 5px 10px #a9a8b7, -5px -5px 10px #fff,
-      inset -5px -5px 10px #fff, inset 5px 5px 10px #a9a8b7;
+    box-shadow:
+      5px 5px 10px #a9a8b7,
+      -5px -5px 10px #fff,
+      inset -5px -5px 10px #fff,
+      inset 5px 5px 10px #a9a8b7;
     transition: 0.3s ease-in;
     transform: scale(1.05);
   }

@@ -7,7 +7,7 @@ export default function ScoreItem({ type }) {
   const score = isCorrect ? correctAnswers : incorrectAnswers;
 
   return (
-    <div className={styles.scoreItem}>
+    <div className={`${styles.scoreItem} ${isCorrect ? styles.correct : styles.wrong}`} >
       <div className={styles.label}>
         {label}
         <span>{score.value}</span>
