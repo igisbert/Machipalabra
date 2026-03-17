@@ -7,7 +7,6 @@
     scale 0.3s;
   cursor: pointer;
   position: relative;
-  color: var(--text-color);
   border: var(--brutalism-border);
   box-shadow: var(--brutalism-shadow-small);
   font-family: "Bungee", system-ui;

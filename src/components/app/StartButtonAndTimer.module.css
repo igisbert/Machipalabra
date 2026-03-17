@@ -6,7 +6,6 @@
     scale 0.3s;
   cursor: pointer;
   font-size: clamp(1.2rem, 3vw, 3rem);
-  color: var(--text-color);
   position: relative;
   border: var(--brutalism-border);
   box-shadow: var(--brutalism-shadow);

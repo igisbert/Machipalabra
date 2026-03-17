@@ -189,7 +189,7 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Contiene la Ñ. Cosa que los integrantes del podcast no puedens servir",
+          "Contiene la Ñ. Cosa que los integrantes del podcast no pueden servir",
         respuesta: "Coño",
       },
     ],

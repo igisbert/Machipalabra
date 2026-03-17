@@ -10,12 +10,6 @@
   --correct: #349f34;
   --wrong: #df4f4f;
   --current: #edf031;
-  --neumorphism-shadow: inset 5px 5px 10px #bdbdbd, inset -5px -5px 10px #ffffff;
-  --neumorphism-shadow-hover: inset -3px -3px 10px #bdbdbd,
-    inset 3px 4px 10px #ffffff;
-  --neumorphism: 5px 5px 10px #918793, -5px -5px 10px #fff;
-  --blur: blur(4px);
-  /* --test: 8px 8px 20px #a9a8b7, -8px -8px 20px #fff; */
   --brutalism-border: 4px solid var(--black);
   --brutalism-shadow: 10px 10px 0px var(--black);
   --brutalism-shadow-small: 3px 3px 0px var(--black);
@@ -47,16 +41,12 @@
 
 @keyframes enter {
   from {
-    transform: translateY(100%)
-      /*  scale(0.5) */
-    ;
+    transform: translateY(100%);
     filter: blur(15px);
   }
 
   to {
-    transform: translateY(0%)
-      /*  scale(1) */
-    ;
+    transform: translateY(0%);
     filter: blur(0);
   }
 }
@@ -66,7 +56,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #7248d7;
-  color: var(--text-color);
 }
 
 body::after {
