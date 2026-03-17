@@ -62,6 +62,10 @@ const machipalabra = [
           "Empieza por D. Ciudad de la costa donde, según Toni, ir mamao por la calle a las seis de la tarde está mal visto.",
         respuesta: "Dénia",
       },
+      {
+        pregunta: "Medicina totalmente adictiva para los niños.",
+        respuesta: "Dalsy",
+      },
     ],
   },
   {
@@ -71,11 +75,6 @@ const machipalabra = [
         pregunta:
           "Empieza por E. Jugador que, según Toni, nunca se ve con un 'cuerpo griego', sino que siempre está con 'tres hamburguesas de más'.",
         respuesta: "Embiid",
-      },
-      {
-        pregunta:
-          "Contiene la E. Conjunto de siete colores que aparece tras la lluvia",
-        respuesta: "arcoíris",
       },
     ],
   },
@@ -117,10 +116,6 @@ const machipalabra = [
           "Empieza por H. Franquicia de hijos de puta que le quitaron una PlayStation 5 a un niño para darle una sudadera",
         respuesta: "Hornets",
       },
-      {
-        pregunta: "Empieza por H. Lugar donde se atiende a los enfermos",
-        respuesta: "hospital",
-      },
     ],
   },
   {
@@ -129,10 +124,6 @@ const machipalabra = [
       {
         pregunta: "Empieza por I. Niñato, sabio, omnista y gilipollas",
         respuesta: "Irving",
-      },
-      {
-        pregunta: "Empieza por I. País con forma de bota en Europa",
-        respuesta: "Italia",
       },
     ],
   },
@@ -143,11 +134,6 @@ const machipalabra = [
         pregunta:
           "Empieza por J. Figura histórica que Juanma describe como 'uno de los primeros casos, en teoría documentados si es verdad la Biblia, de un zombi'",
         respuesta: "Jesucristo,Jesús",
-      },
-      {
-        pregunta:
-          "Empieza por J. Jugador de Los Clippers que ha sido mandado a la mierda por Juanma",
-        respuesta: "James Harden",
       },
     ],
   },
@@ -174,25 +160,11 @@ const machipalabra = [
           "Empieza por L. La red social más desagradable de todas, más falsa aún que Tinder.",
         respuesta: "LinkedIn",
       },
-      {
-        pregunta: "Contiene la L. Astro que ilumina la Tierra de noche",
-        respuesta: "luna",
-      },
     ],
   },
   {
     letra: "M",
     preguntas: [
-      {
-        pregunta:
-          "Empieza por M. Apellido del jugador al que Juanma afirma que no le dieron un iPhone por idiota y que todo lo que le pasa suele ser por idiota",
-        respuesta: "Morris",
-      },
-      {
-        pregunta:
-          "Empieza por M. Nombre que reciben Vucevic, DeRozan y Lavine al juntarse en los Bulls",
-        respuesta: "Mid Three",
-      },
       {
         pregunta: "Empieza por M. Región española donde Toni cursó INEF.",
         respuesta: "Murcia",
@@ -203,8 +175,8 @@ const machipalabra = [
     letra: "N",
     preguntas: [
       {
-        pregunta: "Empieza por N. Color que es la ausencia de luz",
-        respuesta: "negro",
+        pregunta: "Empieza por N. Nombre del río que pasa por el pueblo de Pepe.",
+        respuesta: "Narcea",
       },
       {
         pregunta: "Contiene la N. Mes del año con 28 o 29 días",
@@ -220,10 +192,6 @@ const machipalabra = [
           "Contiene la Ñ. Cosa que los integrantes del podcast no puedens servir",
         respuesta: "Coño",
       },
-      {
-        pregunta: "Contiene la Ñ. Persona de poca edad",
-        respuesta: "niño",
-      },
     ],
   },
   {
@@ -233,10 +201,6 @@ const machipalabra = [
         pregunta:
           "Empieza por O. Jugador histórico con el que muchos jugadores entrenan pero a ninguno se le nota",
         respuesta: "Olajuwon",
-      },
-      {
-        pregunta: "Empieza por O. Metal precioso de color amarillo",
-        respuesta: "oro",
       },
     ],
   },
@@ -263,10 +227,6 @@ const machipalabra = [
           "Empieza por Q. Marca de tienda de campaña que Pepe perdió junto a 200 pesetas y una novia en un festival de Benicàssim en el 96",
         respuesta: "Quechua",
       },
-      {
-        pregunta: "Contiene la Q. Prenda de vestir que cubre el tronco",
-        respuesta: "chaqueta",
-      },
     ],
   },
   {
@@ -291,10 +251,6 @@ const machipalabra = [
         pregunta:
           "Empieza por S. Apellido del entrenador que Toni menciona que le gustaría presentarle a su hermana, porque de ser como en el baloncesto, sería una mujer muy feliz",
         respuesta: "Spoelstra",
-      },
-      {
-        pregunta: "Contiene la S. Vehículo que circula sobre raíles",
-        respuesta: "tren",
       },
     ],
   },
@@ -346,13 +302,8 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Contiene la W. Apellido del portero del Borussia Dortmund al que Machicado le quitó un taxi para vengarse por haberle arrebatado una Champions.",
+          "Empieza por W. Apellido del portero del Borussia Dortmund al que Machicado le quitó un taxi para vengarse por haberle arrebatado una Champions.",
         respuesta: "Weidenfeller",
-      },
-      {
-        pregunta:
-          "Empieza por W. Bebida alcohólica destilada de origen escocés",
-        respuesta: "whisky",
       },
     ],
   },
@@ -363,10 +314,6 @@ const machipalabra = [
         pregunta:
           "Contiene la X. Equipo de la conferencia Este donde se juntan demasiados fatalismos",
         respuesta: "Sixers",
-      },
-      {
-        pregunta: "Contiene la X. Continuo de números que suman diez",
-        respuesta: "seis",
       },
     ],
   },
@@ -390,7 +337,7 @@ const machipalabra = [
     preguntas: [
       {
         pregunta:
-          "Empieza por Z. Jugador cuyo apodo creado por Machicado impide que le den premios al podcast.",
+          "Empieza por Z. Apellido del jugador cuyo apodo creado por Machicado impide que le den premios al podcast.",
         respuesta: "Zubac",
       },
       {

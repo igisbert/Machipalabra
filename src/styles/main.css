@@ -39,28 +39,47 @@
   from {
     filter: brightness(1);
   }
+
   to {
-    filter: brightness(0.3);
+    filter: brightness(0.3) grayscale(1);
   }
 }
 
 @keyframes enter {
   from {
-    transform: translateY(100%) scale(0.5);
+    transform: translateY(100%)
+      /*  scale(0.5) */
+    ;
     filter: blur(15px);
   }
+
   to {
-    transform: translateY(0%) scale(1);
+    transform: translateY(0%)
+      /*  scale(1) */
+    ;
     filter: blur(0);
   }
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Bungee", system-ui;
   display: flex;
   flex-direction: column;
   background-color: #7248d7;
   color: var(--text-color);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 4px,
+      rgba(0, 0, 0, 0.05) 4px);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .app-header {
@@ -103,6 +122,7 @@ body {
 .wrong {
   background-color: var(--wrong);
 }
+
 .current {
   background-color: var(--current);
 }

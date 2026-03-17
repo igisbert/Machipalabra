@@ -1,9 +1,17 @@
-<footer>Machipalabra</footer>
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<footer>{title} - Desde Camboya con amor</footer>
 
 <style>
   footer {
     text-align: center;
-    background-color: var(--black);
+
     color: var(--white);
     padding: 1.5rem 2rem;
     margin-top: 2rem;

@@ -1,5 +1,5 @@
 ---
-import LayoutGame from "../layouts/LayoutGame.astro";
+import Layout from "@/layouts/Layout.astro";
 import Letters from "@/components/app/Letters";
 import ScoreItem from "@/components/app/ScoreItem.jsx";
 import QuestionDisplay from "@/components/app/QuestionDisplay.jsx";
@@ -9,7 +9,7 @@ import EndGameDialog from "@/components/app/EndGameDialog";
 import ShareTemplate from "@/components/app/ShareTemplate";
 ---
 
-<LayoutGame>
+<Layout>
   <main>
     <div class="score-container">
       <ScoreItem type="correct" client:load />
@@ -29,7 +29,7 @@ import ShareTemplate from "@/components/app/ShareTemplate";
   </main>
   <EndGameDialog client:only />
   <ShareTemplate client:idle />
-</LayoutGame>
+</Layout>
 
 <style>
   main {
